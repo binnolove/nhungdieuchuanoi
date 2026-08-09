@@ -29,9 +29,9 @@ const answers=[
 ];
 let q=0, mail={recipient:"",text:""}, self={yesterday:"",tomorrow:""}, reply="";
 function go(fn){trans.style.opacity=1;setTimeout(()=>{fn();trans.style.opacity=0},280)}
-const bgAudio=new Audio("audio/web-bg.mp3"); bgAudio.loop=true; bgAudio.volume=.22;
-const rainAudio=new Audio("audio/rain.mp3"); rainAudio.loop=true; rainAudio.volume=.55;
-const nightAudio=new Audio("audio/night.mp3"); nightAudio.loop=true; nightAudio.volume=.45;
+const bgAudio = new Audio("/web-bg.mp3"); bgAudio.loop=true; bgAudio.volume=.22;
+const rainAudio = new Audio("/rain.mp3"); rainAudio.loop=true; rainAudio.volume=.55;
+const nightAudio = new Audio("/rain.mp3"); nightAudio.loop=true; nightAudio.volume=.45;
 let audioMode="off";
 function stopRoomAudio(){[rainAudio,nightAudio].forEach(a=>{a.pause();a.currentTime=0})}
 function startBackground(){stopRoomAudio();if(audioMode==="on")bgAudio.play().catch(()=>{})}
